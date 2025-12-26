@@ -13,7 +13,7 @@ public class HealthRecord {
 
     public HealthRecord(int height) {
         setHeight(height);
-        averageHeight = ((averageHeight*(counter-1))+(this.height))/(counter);
+
 
     }
     public void setHeight(int height) {
@@ -25,6 +25,7 @@ public class HealthRecord {
             System.out.println("invalid height");
             this.height = DEFAULT_HEIGHT ;
         }
+        averageHeight = ((averageHeight*counter)+(this.height))/(counter+1);
         counter+=1;
 
         // TODO: 3 Update the tallest and shortest height
